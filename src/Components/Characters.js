@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import images from './images.js';
+import { connect } from 'react-redux';
 
 const Characters = ({ characters }) => {
   const characterList = characters.map(character => {
@@ -34,4 +34,10 @@ const Characters = ({ characters }) => {
   )
 }
 
-export default Characters;
+const mapStateToProps = (state) => {
+  return {
+    characters: state.characters
+  }
+}
+
+export default connect(mapStateToProps)(Characters);

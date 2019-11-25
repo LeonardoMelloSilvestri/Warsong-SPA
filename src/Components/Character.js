@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import images from './images.js';
+import { connect } from 'react-redux';
 
-export default class Character extends Component {
+class Character extends Component {
   showCharacter() {
-    let name = this.props.match.params.character_name;
-    const actualCharacter = this.props.characters.find(character => character.name === name);
+    const actualCharacter = this.props.characters;
     return (
       <div className="mt-3">
         <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -87,3 +86,12 @@ export default class Character extends Component {
     )
   }
 }
+
+const mapStateToProps = (state, ownProps) => {
+  let name = ownProps.match.params.character_name;
+  return {
+    characters: state.characters.find(character => character.name === name)
+  }
+}
+
+export default connect(mapStateToProps)(Character);
