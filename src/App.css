@@ -113,3 +113,8 @@ header .jumbotron p {
   height: 500px !important;
   max-width: 400px !important;
 }
+
+#itemList .card-img-top {
+  height: 80px;
+  width: 80px;
+}

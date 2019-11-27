@@ -22,4 +22,3 @@ window.$(function () {
     window.$('.offcanvas-collapse').toggleClass('open')
   })
 })
-

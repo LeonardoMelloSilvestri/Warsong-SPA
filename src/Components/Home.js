@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { backToTop } from '../helpers';
 
 const Home = () => {
   return (
@@ -17,13 +18,13 @@ const Home = () => {
             <div className="col-md-4 d-flex align-items-stretch">
               <div className="card">
                 <div className="card-header">
-                  <h3>Walkthrough</h3>
+                  <h3>Lore</h3>
                 </div>
                 <div className="card-body">
                   <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                 </div>
                 <div className="card-footer">
-                  <a className="btn btn-primary" href="#" role="button">More...</a>
+                  <Link to="/lore" onClick={() => backToTop()} className="btn btn-primary">More...</Link>
                 </div>
               </div>
             </div>
@@ -36,20 +37,20 @@ const Home = () => {
                   <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/characters" className="btn btn-primary">More...</Link>
+                  <Link to="/characters" onClick={() => backToTop()} className="btn btn-primary">More...</Link>
                 </div>
               </div>
             </div>
             <div className="col-md-4 d-flex align-items-stretch mt-3 mt-md-0">
               <div className="card">
                 <div className="card-header">
-                  <h3>Itens</h3>
+                  <h3>Items</h3>
                 </div>
                 <div className="card-body">
                   <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div className="card-footer">
-                  <a className="btn btn-primary" href="#" role="button">More...</a>
+                  <Link to="/items" onClick={() => backToTop()} className="btn btn-primary">More...</Link>
                 </div>
               </div>
             </div>

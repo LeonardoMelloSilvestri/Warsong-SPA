@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { backToTop } from '../helpers';
 
 class Character extends Component {
   showCharacter() {
@@ -15,7 +16,7 @@ class Character extends Component {
             <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Stats</a>
           </li>
           <li className="nav-item">
-            <Link to="/characters" className="btn btn-info nav-link">Return</Link>
+            <Link to="/characters" onClick={() => backToTop()} className="btn btn-info nav-link">Return</Link>
           </li>
         </ul>
         <div className="tab-content" id="myTabContent">

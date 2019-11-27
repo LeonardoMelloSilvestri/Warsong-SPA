@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { backToTop } from '../helpers';
 
 const Characters = ({ characters }) => {
   const characterList = characters.map(character => {
@@ -16,7 +17,7 @@ const Characters = ({ characters }) => {
               <p className="card-text">{character.summaryLore}</p>
             </div>
             <div className="card-footer text-center">
-              <Link to={'character/' + character.name} className="btn btn-primary">More...</Link>
+              <Link to={'character/' + character.name} onClick={() => backToTop()} className="btn btn-primary">More...</Link>
             </div>
           </div>
         </div>
@@ -24,11 +25,10 @@ const Characters = ({ characters }) => {
     )
   })
   return (
-    <div id="characterList">
-      <div className="container">
-        <div className="row">
-          { characterList }
-        </div>
+    <div id="characterList" className="container text-center">
+      <h2 className="mt-3">Characters</h2>
+      <div className="row">
+        {characterList}
       </div>
     </div>
   )

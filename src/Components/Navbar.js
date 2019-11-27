@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { backToTop } from '../helpers';
 
 export default function Navbar() {
   return (
@@ -13,16 +14,16 @@ export default function Navbar() {
         <div className="navbar-collapse offcanvas-collapse ml-2" id="navbarsExampleDefault">
           <ul className="navbar-nav mr-auto" data-toggle="offcanvas">
             <li className="nav-item">
-              <Link to="/" className="nav-link" >Home</Link>
+              <Link to="/" onClick={() => backToTop()} className="nav-link" >Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Walkthrough</a>
+              <Link to="/lore" onClick={() => backToTop()} className="nav-link">Lore</Link>
             </li>
             <li className="nav-item">
-              <Link to="/characters" className="nav-link" >Characters</Link>
+              <Link to="/characters" onClick={() => backToTop()} className="nav-link" >Characters</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Itens</a>
+              <Link to="/items" onClick={() => backToTop()} className="nav-link">Items</Link>
             </li>
           </ul>
         </div>
