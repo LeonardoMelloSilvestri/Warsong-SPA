@@ -7,7 +7,7 @@ const Characters = ({ characters }) => {
   const characterList = characters.map(character => {
     return (
       <React.Fragment key={character.id} >
-        <div className="col-sm-3 mt-3">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-3">
           <div className="card h-100">
             <div className="card-header text-center">
               <h5 className="font-weight-bolder mb-0">{character.name}</h5>
@@ -25,7 +25,7 @@ const Characters = ({ characters }) => {
     )
   })
   return (
-    <div id="characterList" className="container text-center">
+    <div id="characterList" className="container text-center mb-3">
       <h2 className="mt-3">Characters</h2>
       <div className="row">
         {characterList}

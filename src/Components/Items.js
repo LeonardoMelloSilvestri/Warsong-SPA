@@ -5,7 +5,7 @@ const Items = ({ items }) => {
   const itemList = items.map(item => {
     return (
       <React.Fragment key={item.id}>
-        <div className="col-sm-6 col-md-2 mt-3">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3">
           <div className="card text-center">
             <div className="card-header pb-0">
               <h5 className="card-title">{item.name}</h5>
@@ -23,7 +23,7 @@ const Items = ({ items }) => {
     )
   })
   return (
-    <div id="itemList" className="container text-center">
+    <div id="itemList" className="container text-center mb-3">
       <h2 className="mt-3">Items</h2>
       <div className="row ">
         {itemList}

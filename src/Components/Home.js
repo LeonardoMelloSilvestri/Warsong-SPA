@@ -78,12 +78,6 @@ const Home = () => {
           </div>
         </section>
       </main>
-
-      <footer>
-        <footer className="page-footer font-small text-light bg-dark">
-          <div className="footer-copyright text-center py-2">© 2019 Warsong World</div>
-        </footer>
-      </footer>
     </div>
   )
 }
